@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Update Custom Object Form
+
+    a(href="/") Return to the homepage
+
+    form(action="/update-cobj", method="POST")
+      div
+        label(for="name") Name
+        input(type="text", id="name", name="name", required)
+
+      div
+        label(for="prop2Value") #{prop2}
+        input(type="text", id="prop2Value", name="prop2Value", required)
+
+      div
+        label(for="prop3Value") #{prop3}
+        input(type="text", id="prop3Value", name="prop3Value", required)
+
+      div
+        label(for="propNxValue") #{propNx}
+        input(type="text", id="propNxValue", name="propNxValue", required)
+
+      button(type="submit") Submit

@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= objectLabel
+
+    a(href="/update-cobj") Add to this table
+
+    table
+      thead
+        tr
+          th Name
+          th= prop2
+          th= prop3
+          th= propNx
+      tbody
+        each record in records
+          tr
+            td= record.properties.name
+            td= record.properties[prop2]
+            td= record.properties[prop3]
+            td= record.properties[propNx]
